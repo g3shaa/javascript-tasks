@@ -8,16 +8,16 @@
 
 <body>
     <form id="form1" onsubmit="getFormvalue()">
-        First name: <input type="text" name="fname" placeholder="Georgi"><br>
-        Last name: <input type="text" name="lname" placeholder="Aprahamov"><br>
-        <input type="submit" value="Submit">
+        Име: <input type="text" name="fname" value="Georgi"><br>
+        Фамилия: <input type="text" name="lname" value="Aprahamov"><br>
+        <input type="submit" value="Потвърди">
     </form>
     <script>
         function getFormvalue() {
             var x = document.getElementById("form1");
             for (var i = 0; i < x.length; i++) {
                 if (x.elements[i].value != 'Submit') {
-                    console.log(x.elements[i].value);
+                    alert(x.elements[i].value);
                 }
             }
         }
