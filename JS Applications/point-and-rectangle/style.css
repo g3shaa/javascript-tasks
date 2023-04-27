@@ -1,0 +1,99 @@
+body {
+  background-color: #F4E7D8;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 14px;
+}
+
+#app-container {
+  width: 600px;
+  margin: 20px auto;
+  border-radius: 5px;
+  background-color: #F0E3C9;
+  box-shadow: 0 1px 3px rgba(0,0,0,.2);
+}
+
+#input-container {
+  padding: 20px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: #E8D9BF;
+}
+
+#input-container label {
+  display: block;
+  margin-bottom: 10px;
+  color: #9D7449;
+}
+
+#input-container input[type=range] {
+  -webkit-appearance: none;
+  background-color: transparent;
+  height: 5px;
+  margin: 0 10px;
+  width: 100%;
+}
+
+#input-container input[type=range]:focus {
+  outline: none;
+}
+
+#input-container input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  background-color: #F08E7B;
+  border-radius: 50%;
+  height: 16px;
+  margin-top: -6px;
+  width: 16px;
+}
+
+#input-container input[type=range]::-moz-range-thumb {
+  background-color: #F08E7B;
+  border-radius: 50%;
+  height: 16px;
+  width: 16px;
+}
+
+#submit-button {
+  background-color: #F08E7B;
+  border: none;
+  border-radius: 3px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 6px 16px;
+  transition: background-color .2s ease-in-out;
+}
+
+#submit-button:hover {
+  background-color: #FF5E5B;
+}
+
+#output-container {
+  padding: 20px;
+  text-align: center;
+  background-color: #E8D9BF;
+}
+
+#canvas {
+  background-color: #FFF8EC;
+  border: 1px solid #D3BF9D;
+  margin-bottom: 20px;
+}
+
+#result {
+  font-size: 18px;
+  font-weight: 600;
+  color: #9D7449;
+}
+
+#coordsPoint {
+  color: #9D7449;
+}
+
+#coordsRectangle {
+  color: #9D7449;
+}
+
+#WidthHeightRectangle {
+  color: #9D7449;
+}

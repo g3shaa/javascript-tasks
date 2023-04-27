@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>User Information Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Потребители | Elite Devs</h1>
+        <form id="user-form">
+            <input type="hidden" id="user-id">
+            <label for="first-name">Име</label>
+            <input type="text" id="first-name" required>
+            <label for="last-name">Фамилия</label>
+            <input type="text" id="last-name" required>
+            <label for="department">Държава и Град</label>
+            <input type="text" id="department" required>
+            <label for="sex">Пол</label>
+            <div>
+                <input type="radio" name="sex" id="male" value="Male" required>
+                <label for="male">Мъж</label>
+            </div>
+            <div>
+                <input type="radio" name="sex" id="female" value="Female" required>
+                <label for="female">Жена</label>
+            </div>
+            <button type="submit" id="save-btn">Запази</button>
+            <button type="button" id="reset-btn">Нулирай</button>
+        </form>
+        <table id="user-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Име</th>
+                    <th>Фамилия</th>
+                    <th>Държава и Град</th>
+                    <th>Пол</th>
+                    <th>Действия</th>
+                </tr>
+            </thead>
+            <tbody id="user-table-body"></tbody>
+        </table>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

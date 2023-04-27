@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Point and Rectangle Visualization</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="app-container">
+        <div id="input-container">
+            <label for="rectangle-x">Rectangle X:</label>
+            <input type="range" id="rectangle-x" min="0" max="400" value="0">
+            <label for="rectangle-y">Rectangle Y:</label>
+            <input type="range" id="rectangle-y" min="0" max="400" value="0">
+            <label for="rectangle-width">Rectangle Width:</label>
+            <input type="range" id="rectangle-width" min="0" max="400" value="100">
+            <label for="rectangle-height">Rectangle Height:</label>
+            <input type="range" id="rectangle-height" min="0" max="400" value="100">
+            <label for="point-x">Point X:</label>
+            <input type="range" id="point-x" min="0" max="400" value="50">
+            <label for="point-y">Point Y:</label>
+            <input type="range" id="point-y" min="0" max="400" value="50">
+            <button id="submit-button">Visualize</button>
+        </div>
+        <div id="output-container">
+            <canvas id="canvas" width="400" height="400"></canvas>
+            <div id="result"></div>
+            <div id="coordsPoint"></div>
+            <div id="coordsRectangle"></div>
+            <div id="WidthHeightRectangle"></div>
+        </div>
+    </div>
+
+    <script src="visualization.js"></script>
+</body>
+
+</html>
