@@ -24,15 +24,16 @@ function binarySearch(arr, x) {
 }
 
 // Инициализиране на масив и елемент, който се търси
-var arr = [1, 3, 5, 7, 9];
-var x = 5;
+var arr = [1, 3, 5, 7, 8, 9];
+var x = 8;
 
 // Търсене на x в масива arr
+console.log(arr);
 var result = binarySearch(arr, x);
 
 // Ако x не е намерен в масива, извежда съобщение в конзолата
 if (result === -1) {
-    console.log(x + " не е намерен в масива.");
+    console.log(x + " е намерен на позиция " + result);
     // Ако x е намерен в масива, извежда съобщение за неговата позиция
 } else {
     console.log(x + " е намерен на позиция " + result + " в масива.");
