@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Телефонен указател</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div class="phonebook">
+		<h1>Телефонен указател</h1>
+		<form>
+			<label for="name">Име:</label>
+			<input type="text" id="name" name="name"><br><br>
+			<label for="phone">Телефон:</label>
+			<input type="text" id="phone" name="phone"><br><br>
+			<button type="button" id="addBtn">Добави контакт</button>
+		</form>
+		<table id="contacts">
+			<thead>
+				<tr>
+					<th>Име</th>
+					<th>Телефон</th>
+				</tr>
+			</thead>
+			<tbody>
+			</tbody>
+		</table>
+	</div>
+
+	<script src="app.js"></script>
+</body>
+</html>

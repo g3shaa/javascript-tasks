@@ -1,0 +1,49 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2 {
+    text-align: center;
+}
+
+#order-form {
+    margin: 20px auto;
+    max-width: 500px;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+#order-form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+#order-form input,
+#order-form textarea {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+#orders-list {
+    margin: 20px auto;
+    max-width: 500px;
+}
+
+#orders-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.order {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}

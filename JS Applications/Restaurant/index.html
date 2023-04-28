@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ресторант поръчки</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <h1>Ресторант поръчки</h1>
+    <div id="order-form">
+        <h2>Нова поръчка</h2>
+        <form id="new-order">
+            <label for="name">Име:</label>
+            <input type="text" id="name" name="name" required>
+            <br>
+            <label for="table-number">Номер на маса:</label>
+            <input type="number" id="table-number" name="table-number" min="1" required>
+            <br>
+            <label for="order-details">Детайли за поръчката:</label>
+            <textarea id="order-details" name="order-details" required></textarea>
+            <br>
+            <button type="submit">Потвърди поръчката</button>
+        </form>
+    </div>
+    <div id="orders-list">
+        <h2>Актуални поръчки</h2>
+        <ul id="orders"></ul>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
