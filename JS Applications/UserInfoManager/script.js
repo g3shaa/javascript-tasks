@@ -4,7 +4,6 @@ const resetButton = document.querySelector('#reset-btn');
 const tableBody = document.querySelector('#user-table-body');
 let users = [];
 
-// Load saved user data from local storage
 function loadUsers() {
   if (localStorage.getItem('users')) {
     users = JSON.parse(localStorage.getItem('users'));
@@ -12,7 +11,6 @@ function loadUsers() {
   }
 }
 
-// Display saved user data in table
 function displayUsers() {
   tableBody.innerHTML = '';
   users.forEach((user, index) => {
@@ -21,7 +19,7 @@ function displayUsers() {
       <td>${index + 1}</td>
       <td>${user.firstName}</td>
       <td>${user.lastName}</td>
-      <td>${user.department}</td>
+      <td>${user.city}</td>
       <td>${user.sex}</td>
       <td>
         <button class="edit-btn" data-id="${index}">Edit</button>
@@ -50,13 +48,13 @@ function addUser(event) {
   event.preventDefault();
   const firstName = document.querySelector('#first-name').value;
   const lastName = document.querySelector('#last-name').value;
-  const department = document.querySelector('#department').value;
+  const city = document.querySelector('#city').value;
   const sex = document.querySelector('input[name="sex"]:checked').value;
 
   const user = {
     firstName,
     lastName,
-    department,
+    city,
     sex,
   };
 
@@ -66,7 +64,6 @@ function addUser(event) {
   resetForm();
 }
 
-// Delete user data from table and local storage
 function deleteUser(event) {
   if (event.target.classList.contains('delete-btn')) {
     const id = event.target.dataset.id;
@@ -76,14 +73,13 @@ function deleteUser(event) {
   }
 }
 
-// Edit user data
 function editUser(event) {
   if (event.target.classList.contains('edit-btn')) {
     const id = event.target.dataset.id;
     const user = users[id];
     document.querySelector('#first-name').value = user.firstName;
     document.querySelector('#last-name').value = user.lastName;
-    document.querySelector('#department').value = user.department;
+    document.querySelector('#city').value = user.city;
     document.querySelector(`input[name="sex"][value="${user.sex}"]`).checked = true;
     saveButton.innerHTML = 'Update';
     saveButton.removeEventListener('click', addUser);
@@ -93,7 +89,7 @@ function editUser(event) {
       event.preventDefault();
       user.firstName = document.querySelector('#first-name').value;
       user.lastName = document.querySelector('#last-name').value;
-      user.department = document.querySelector('#department').value;
+      user.city = document.querySelector('#city').value;
       user.sex = document.querySelector('input[name="sex"]:checked').value;
       displayUsers();
       saveUsers();
